@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>23678eab-1f28-4e0e-96cd-1a77cef5dea9</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>ComputationalStatisticsInPython</Name>
+    <RootNamespace>ComputationalStatisticsInPython</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Exercises_2_FunctionsAreFirstClass.py" />
+    <Compile Include="Exercises_3_FunctionalProgramming.py" />
+    <Compile Include="Exercises_4_Exercises.py" />
+    <Compile Include="Exercises_1_Introduction.py" />
+    <Compile Include="Exercises_5_DataScienceIsOSEMN.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exercises_6_Strings.py" />
+    <Compile Include="Exercises_7_WorkingWithStructuredData.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FinancialRisk_VaR.py" />
+    <Compile Include="FinancialRisk_VaRClass.py" />
+    <Compile Include="SentimentAnalysis_Announcements.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrincipalComponentAnalysis.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrincipalComponentAnalysis.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IssuerToCompanyMapping.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="neuralNetwork.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PS_LogisticRegression.py" />
+    <Compile Include="RiskCalculator.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
