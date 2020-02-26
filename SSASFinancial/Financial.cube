@@ -1,0 +1,558 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ee5ac671-81a7-488b-8fe0-76143755ac11" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Financial</ID>
+  <Name>Financial</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="f5f4b338-2a6c-4530-8320-07902e50acfb">
+      <ID>Sample Portfolio</ID>
+      <Name>Sample Portfolio</Name>
+      <DimensionID>Sample Portfolio</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b9161205-f672-48b4-ae82-b8bb6f5549a2">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="be502a17-8a14-44ce-9d1e-7c8c2aa918ed">
+      <ID>Sample Portfolio</ID>
+      <Name>Sample Portfolio</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="ba0d43ec-0874-4453-afdd-f439800cc704">
+          <ID>Inv Nums</ID>
+          <Name>Inv Nums</Name>
+          <Source dwd:design-time-name="a44221a6-3229-4e45-8b6d-e08a0b753d8b">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="48cb37f9-0cb3-42c8-aecd-435a2294e642">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>InvNums</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="5d326ca7-b660-41a6-a79e-0d5a8c2a80d9">
+          <ID>Account MV</ID>
+          <Name>Account MV</Name>
+          <Source dwd:design-time-name="ded6d18d-18e8-4ea5-b693-641df014dc98">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="505b5234-4836-44cc-8a97-e22d6f198388">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>Account_MV</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="215380c2-704b-4507-961c-75cc2e5a80f1">
+          <ID>Coupon</ID>
+          <Name>Coupon</Name>
+          <Source dwd:design-time-name="7bbabd44-42a7-4a0f-9144-5b06370b1fac">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="391baef1-a024-48c7-b43e-5f9a0077b13d">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>Coupon</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="693912ae-844f-4caa-a690-734c2e4beb00">
+          <ID>Price</ID>
+          <Name>Price</Name>
+          <Source dwd:design-time-name="03a4f84f-b516-4d02-b8b7-08db9a528572">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cbd948a6-7c1e-4f02-90ea-12b104d0c50d">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>Price</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b2bbb90c-e7de-4771-8a22-ee2b681b21d4">
+          <ID>Duration</ID>
+          <Name>Duration</Name>
+          <Source dwd:design-time-name="6dcaf5c3-484b-4543-82c4-f1963c6359ae">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="66c79a66-3442-4cbf-b09e-7e4b33b07f5b">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>Duration</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b7614c89-6741-4fbb-9e30-9067edc45439">
+          <ID>OAS</ID>
+          <Name>OAS</Name>
+          <Source dwd:design-time-name="a48326ae-0727-40ab-a5b6-65c593236ce0">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6d6bc206-82ac-4efa-ad9b-8ef0c053ece9">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>OAS</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="488831fe-684e-4e4a-8277-9762545a1fa7">
+          <ID>YTW</ID>
+          <Name>YTW</Name>
+          <Source dwd:design-time-name="a7717a6d-6749-418b-ac80-78eb67e9828c">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f7951705-3360-4fd2-b548-e72ea4b612f3">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>YTW</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="f6619129-7309-45ca-9cd9-b2d953f7bfe1">
+          <ID>Curr Face</ID>
+          <Name>Curr Face</Name>
+          <Source dwd:design-time-name="87f41f05-6f74-454a-852e-0cd967b8fca5">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="be2cbfce-c738-44f6-b0fb-1a47b31301ea">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>Curr_Face</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="a296db98-d5c0-475e-afad-5be29aba8bbb">
+          <ID>O- Face</ID>
+          <Name>O- Face</Name>
+          <Source dwd:design-time-name="9089c5c8-1158-4df2-a554-5d8a6e1a5a69">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="abbb9c18-89cd-4995-809f-214e427e9abc">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>O-Face</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="2d9151f7-7d95-4e77-8081-97ae2ce7f77a">
+          <ID>Mkt Val</ID>
+          <Name>Mkt Val</Name>
+          <Source dwd:design-time-name="14da4de8-adc4-4b7b-8b75-ea19ee8f6aaf">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6aa415fc-2a65-45eb-b3dc-688085278614">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>Mkt_Val</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9e0723fd-defc-4d95-a82c-a05672bcc942">
+          <ID>PMV</ID>
+          <Name>PMV</Name>
+          <Source dwd:design-time-name="636fa374-0ae1-4bd0-b889-02e418aebf08">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2723849f-07fa-4879-aab8-b9fb3eec483d">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>PMV</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="0a38c4c8-05ee-43e1-a355-ea09a9e57149">
+          <ID>DWE</ID>
+          <Name>DWE</Name>
+          <Source dwd:design-time-name="eb51da4a-fba8-4c55-9768-75453faa8188">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="430c24b1-e320-4b02-8125-c03aca599fc2">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>DWE</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="91f58e30-413b-406a-89af-a2b4f6ea5dab">
+          <ID>Sprd Dur</ID>
+          <Name>Sprd Dur</Name>
+          <Source dwd:design-time-name="e4673602-0a67-4a5a-acfe-463923a6ff8d">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f672884e-1a5d-4cf7-a637-8fd71876ce1b">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>Sprd_Dur</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="893cb160-4054-42db-9b54-2b3b22ec2c11">
+          <ID>Mod Dur</ID>
+          <Name>Mod Dur</Name>
+          <Source dwd:design-time-name="cb7304d2-f51a-45e3-9835-a481c81f9286">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="81d6511b-c8de-4a44-8f1a-3f2291290cc2">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>Mod_Dur</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="92d8572e-8395-4fc6-9b2f-3c18398f4715">
+          <ID>Effective Dur</ID>
+          <Name>Effective Dur</Name>
+          <Source dwd:design-time-name="53c0e241-b816-45f2-9c9b-9ec28e84638d">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a9d769e4-c687-49bd-b34c-37c5dd3ec440">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>Effective_Dur</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="af9a982e-ed86-40d2-bd75-c6c1f078ffe5">
+          <ID>Convexity</ID>
+          <Name>Convexity</Name>
+          <Source dwd:design-time-name="879133d2-a022-461b-9c16-31156b931db3">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="411b6de6-5b53-4940-aec0-52f59b24ded9">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>Convexity</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="593dba9c-1244-4511-96e4-71f0cb4876f1">
+          <ID>KRD 1Y</ID>
+          <Name>KRD 1Y</Name>
+          <Source dwd:design-time-name="35a47e7f-06f6-467c-a564-89263ae50027">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="76ca44a8-63ae-4e40-b522-5252180a5990">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>KRD_1Y</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c4ae514e-ba98-4aba-a7d7-1b6e3c9d494b">
+          <ID>KRD 2Y</ID>
+          <Name>KRD 2Y</Name>
+          <Source dwd:design-time-name="ae1538e3-d382-44c5-9e21-8ae8331db2b1">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="65d744da-dca8-4337-abe2-11e624438d02">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>KRD_2Y</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="96070b72-8178-4fce-9f15-c152b8674f27">
+          <ID>KRD 3Y</ID>
+          <Name>KRD 3Y</Name>
+          <Source dwd:design-time-name="0b14f5f3-7aae-41b8-a78c-ee47232afbfd">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7dfb96b2-36e7-4c42-9bf9-9a4582f08e23">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>KRD_3Y</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b0877434-d96e-4971-a9ef-a85ff1d1e203">
+          <ID>KRD 5Y</ID>
+          <Name>KRD 5Y</Name>
+          <Source dwd:design-time-name="52b86fce-d12a-4777-af0b-40edcfc36b59">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="55154b42-4dc8-49b9-9175-1e42b0060c56">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>KRD_5Y</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="6796b912-068a-4faa-be83-96c0f2893b8e">
+          <ID>KRD 7Y</ID>
+          <Name>KRD 7Y</Name>
+          <Source dwd:design-time-name="c5948699-759e-4917-90a4-2bc6fba58589">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1f9b6674-5b09-4a78-ab76-7ea7d94783f2">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>KRD_7Y</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="7dbd1de3-0155-4fe4-aa1a-28f33b3f1a1d">
+          <ID>KRD 10Y</ID>
+          <Name>KRD 10Y</Name>
+          <Source dwd:design-time-name="037c4a5a-9127-4c26-ac03-799349915344">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="bd104533-f980-4257-8976-a58929f1e2ce">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>KRD_10Y</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3fd081f1-0e62-4152-b25d-99ffd0041a0b">
+          <ID>KRD 15Y</ID>
+          <Name>KRD 15Y</Name>
+          <Source dwd:design-time-name="286d2c84-22a2-473e-818b-13101e1f265a">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="939d7ad5-16af-4597-bee8-2610cbf81200">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>KRD_15Y</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="256fcb77-1a23-40d2-bf44-d736dd29b223">
+          <ID>KRD 20Y</ID>
+          <Name>KRD 20Y</Name>
+          <Source dwd:design-time-name="b175dbcd-a172-410b-b459-47c4b5d21845">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="db44f831-d162-4939-b41c-80a9d2d8601b">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>KRD_20Y</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="cead0266-5801-402c-a3ce-7fd4e8fc26bc">
+          <ID>KRD 25Y</ID>
+          <Name>KRD 25Y</Name>
+          <Source dwd:design-time-name="35892ac5-5440-4daa-b50b-c369ffa3b656">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="66edb328-54dd-463a-94e9-314887f18d55">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>KRD_25Y</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d3b441e9-0a2e-464f-8685-31efbbb54b7f">
+          <ID>KRD 30Y</ID>
+          <Name>KRD 30Y</Name>
+          <Source dwd:design-time-name="1d3c47ea-e866-4d96-99a1-aea44569098f">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5394c68e-59c2-4d36-9a48-159b2cce46f2">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>KRD_30Y</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="f0b9f649-fdb2-4ea5-9791-b46e3cf4b7e3">
+          <ID>Factor</ID>
+          <Name>Factor</Name>
+          <Source dwd:design-time-name="9bbfec47-d911-45be-b173-91e28db9e781">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ed78967e-0c9f-4d38-9836-15178c6435ae">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>Factor</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="45d63601-289e-4601-b1bd-8949d7c02bbd">
+          <ID>Flat MV</ID>
+          <Name>Flat MV</Name>
+          <Source dwd:design-time-name="186d6c57-4d3b-471f-ac6c-122402d4acaf">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="be7b824d-c308-43db-9d47-5bfb51283eee">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>Flat_MV</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="8c86080e-0f52-4fd0-952e-a3727d7738ce">
+          <ID>Base To USD</ID>
+          <Name>Base To USD</Name>
+          <Source dwd:design-time-name="f446b513-75ef-4cfe-84a6-c16e58e30aaa">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="bc2068a5-d8e2-42ac-90b8-b7434a28f25a">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>BaseToUSD</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="f54b6871-6cd9-416a-8a66-22222950a6fa">
+          <ID>Accrued Interest</ID>
+          <Name>Accrued Interest</Name>
+          <Source dwd:design-time-name="c84aee74-2452-436d-b532-d6fc9a06b5e2">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a444468f-befd-444e-b462-2344966b43c2">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>AccruedInterest</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c50fcd15-3208-457d-938d-dcca39f6fbc3">
+          <ID>Stat Book Yield</ID>
+          <Name>Stat Book Yield</Name>
+          <Source dwd:design-time-name="d7b60393-f2a1-4053-a98f-9b7b0261418f">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="81b82feb-a877-4733-a696-57b301d3c86c">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>Stat_Book_Yield</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="842978f7-f34f-4627-87c7-44efad490dbc">
+          <ID>Stat Book Price</ID>
+          <Name>Stat Book Price</Name>
+          <Source dwd:design-time-name="32e020a2-e258-4a0b-8b1e-1179a70e0cb8">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="675e2667-76ee-4c0a-82cc-6f12963981ae">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>Stat_Book_Price</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="4d5c5139-ff3e-42ff-95e8-8db394610a42">
+          <ID>Account M Vex RRP</ID>
+          <Name>Account M Vex RRP</Name>
+          <Source dwd:design-time-name="aa336303-92c8-4c19-9b44-b9a26e6d90c2">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="aa76fbcf-15e3-4ca4-8144-87cabfdc74c9">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>AccountMVexRRP</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ab675f7e-7b79-46a0-a35c-9114557c2466">
+          <ID>PM Vex RRP</ID>
+          <Name>PM Vex RRP</Name>
+          <Source dwd:design-time-name="1697a93f-cf7d-42db-884e-720f3950d30b">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="601ca47b-afa7-4e10-b5c8-a8639265705e">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>PMVexRRP</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="38b7bfcb-d6aa-44ca-8598-eefd9a540633">
+          <ID>DW Eex RRP</ID>
+          <Name>DW Eex RRP</Name>
+          <Source dwd:design-time-name="324e8a6f-ff79-4461-83b5-175233ec84b3">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="79bdc160-8e4f-4702-ba29-5c83299c9067">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>DWEexRRP</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="0d670235-09d2-4791-aea7-f08c474cd0dd">
+          <ID>Usd Mkt Value Calculated</ID>
+          <Name>Usd Mkt Value Calculated</Name>
+          <Source dwd:design-time-name="c7dd1bb5-897c-41c6-8a30-42910f5e252c">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="da18d509-91f2-406d-bee4-4d87f65685aa">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>UsdMktValueCalculated</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="4f960548-4329-42c6-9d18-0cbd1e1c4570">
+          <ID>Account MV USD</ID>
+          <Name>Account MV USD</Name>
+          <Source dwd:design-time-name="c5646f50-4125-4623-baa1-49bbe6e7e9a4">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="053d7470-7730-46f0-889c-693f127212e5">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>Account_MV_USD</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9410c9bc-8571-4402-a7c8-7d9a30fb2549">
+          <ID>FLAT MV USD</ID>
+          <Name>FLAT MV USD</Name>
+          <Source dwd:design-time-name="b9f6ef39-6d2e-40ff-85f5-ad571372c187">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d1e15c8d-2322-4c25-8018-2547d69dfec2">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>FLAT_MV_USD</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="415d6720-98ca-451b-bcad-ff3fc3a282eb">
+          <ID>Accrued Interest USD</ID>
+          <Name>Accrued Interest USD</Name>
+          <Source dwd:design-time-name="a2993f2e-c537-4250-9ff4-a301aadfcf47">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8dfc5d6c-7c79-450a-a177-c5fd466660db">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>AccruedInterest_USD</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9333e159-72f9-4357-9e0f-73515b2f96d7">
+          <ID>Accrued Int USD</ID>
+          <Name>Accrued Int USD</Name>
+          <Source dwd:design-time-name="83abd2c8-4ed0-4d61-a7af-f59db4855c3f">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9d00654b-68c9-46d1-b861-11cc1a1a6bb0">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>AccruedInt_USD</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="216f48dd-6947-44ad-97a0-f6881d26c752">
+          <ID>Account M Vex RRP USD</ID>
+          <Name>Account M Vex RRP USD</Name>
+          <Source dwd:design-time-name="c1b0b40f-56b2-4d51-9d12-591bc31beebe">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="13504514-ddeb-4d2b-b7b9-b2f03b84a3d7">
+              <TableID>dbo_SamplePortfolio</TableID>
+              <ColumnID>AccountMVexRRP_USD</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="42073479-3a2b-40b0-a6f6-1210c8a4a140">
+          <ID>Sample Portfolio Count</ID>
+          <Name>Sample Portfolio Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="360c514f-9116-4b32-84c3-2257051b37b3">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="dd11c4d5-3e3f-4a34-93d5-88568a6c73e2">
+              <TableID>dbo_SamplePortfolio</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="1986ad25-6dba-4b0c-bd8a-827fcd4c881b">
+          <CubeDimensionID>Sample Portfolio</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="77c31c9e-ab28-4b1c-8533-921d662da1ee">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bb0834bb-6a20-4de7-8e13-a17d4ce84322">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1f07b7e8-4722-477c-ab5a-944108cd3c3d">
+                    <TableID>dbo_SamplePortfolio</TableID>
+                    <ColumnID>Id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="56179d01-d9b0-4122-a005-0951c728a67e">
+    <DataSourceViewID>Financial</DataSourceViewID>
+  </Source>
+</Cube>

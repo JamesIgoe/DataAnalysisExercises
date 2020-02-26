@@ -1,0 +1,390 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="18fe8765-69be-4fb5-be76-dabae016b3ad" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Sample Portfolio</ID>
+  <Name>Sample Portfolio</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_SamplePortfolio</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="1bd09a34-b5d4-4f87-8e7e-f6b80fbc4de8">
+    <DataSourceViewID>Financial</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7d0416cf-7850-4203-97ba-93639a504111">
+      <ID>Coupon</ID>
+      <Name>Coupon</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="33f0df6c-23d6-4b69-b9f2-e94795cb54d2">
+          <DataType>Single</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="10b41aa4-1793-426d-921e-291e40e37985">
+            <TableID>dbo_SamplePortfolio</TableID>
+            <ColumnID>Coupon</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="dd3cbae9-62cf-44c8-a848-489779612294">
+      <ID>Duration</ID>
+      <Name>Duration</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="91c2ea49-bf66-426c-ada2-bffe04f0b980">
+          <DataType>Single</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d3aab67e-7130-4a6b-afb8-d9a127c6a4a5">
+            <TableID>dbo_SamplePortfolio</TableID>
+            <ColumnID>Duration</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="64a5f9d3-994e-4caf-ae6c-35e2cbfa9b5c">
+      <ID>DWE</ID>
+      <Name>DWE</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9471b14c-7112-46fb-be8c-0d81db3d0c9f">
+          <DataType>Single</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="aac83de1-f44c-4840-b05e-21c379a9ee51">
+            <TableID>dbo_SamplePortfolio</TableID>
+            <ColumnID>DWE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="6227a7bb-abdc-4637-8742-68e7f614a9c4">
+      <ID>Effective Dur</ID>
+      <Name>Effective Dur</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e6a80b47-c1a7-4618-a0d4-70187717602c">
+          <DataType>Single</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d777a17e-da7a-4df9-aa0e-f793c8d7148e">
+            <TableID>dbo_SamplePortfolio</TableID>
+            <ColumnID>Effective_Dur</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="40d99568-8637-4ba0-97ee-f2149d8aa7f8">
+      <ID>Id</ID>
+      <Name>Id</Name>
+      <IsKey>true</IsKey>
+      <Type>Long</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d9114c3d-5876-42ea-a13a-4e402db7557d">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="94a16249-5d4c-4a89-bf03-197b4c6e9e2f">
+            <TableID>dbo_SamplePortfolio</TableID>
+            <ColumnID>Id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="58e6ba65-89b6-47df-9788-6638d77f5f04">
+      <ID>Mod Dur</ID>
+      <Name>Mod Dur</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="177879d9-ba05-4d49-ba3c-d23e3828cd87">
+          <DataType>Single</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7275af84-8667-43ce-8f7e-42c533e9e444">
+            <TableID>dbo_SamplePortfolio</TableID>
+            <ColumnID>Mod_Dur</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e65b4382-4d85-42f1-9b21-0af3e1799b99">
+      <ID>OAS</ID>
+      <Name>OAS</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9fca507a-9ee6-42d2-8166-87bd16f9ae41">
+          <DataType>Single</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f20af8ab-d43f-4d8e-9e19-e7525f18f12f">
+            <TableID>dbo_SamplePortfolio</TableID>
+            <ColumnID>OAS</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a493d9cc-e35d-4c6c-bb32-192728df6d6d">
+      <ID>Price</ID>
+      <Name>Price</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1f6d9a43-ca3f-4386-89d0-bc10453bc7af">
+          <DataType>Single</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e1e794a6-02f5-49ec-9b02-47105e572963">
+            <TableID>dbo_SamplePortfolio</TableID>
+            <ColumnID>Price</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="cc08dbc0-5f25-40ce-af37-0f52bd0a34c6">
+      <ID>Sec Group</ID>
+      <Name>Sec Group</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dd3c843f-22c7-4e20-815d-38ce54d39bb6">
+          <DataType>WChar</DataType>
+          <DataSize>55</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f5953acb-723e-4ee4-b88b-c160f11d44e3">
+            <TableID>dbo_SamplePortfolio</TableID>
+            <ColumnID>Sec_Group</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="6aac53e1-0c3a-41a0-b72b-be332d5fdda0">
+      <ID>Sec Type</ID>
+      <Name>Sec Type</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="39f91bbc-7e4f-4782-92d4-e6fd9681bff1">
+          <DataType>WChar</DataType>
+          <DataSize>55</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1b92b8e3-4cf1-4da6-bfbf-812e6fbd99c6">
+            <TableID>dbo_SamplePortfolio</TableID>
+            <ColumnID>Sec_Type</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="64ae7255-c741-4951-8343-eff5eba623b7">
+      <ID>WAL</ID>
+      <Name>WAL</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d3b8aacf-8d0b-4bee-bc28-782d93468037">
+          <DataType>WChar</DataType>
+          <DataSize>55</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="269a017b-c623-47cc-ab89-b9d5ad9fc4a7">
+            <TableID>dbo_SamplePortfolio</TableID>
+            <ColumnID>WAL</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a478635e-afc2-4689-b7bf-28b783717774">
+      <ID>WAL To Worst</ID>
+      <Name>WAL To Worst</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="23944cf3-92fb-40b3-bea6-b24e0b7a55b8">
+          <DataType>WChar</DataType>
+          <DataSize>55</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8b456858-72cd-4dfc-86bd-936b48895f03">
+            <TableID>dbo_SamplePortfolio</TableID>
+            <ColumnID>WAL_to_Worst</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="672c949c-a117-40e0-acce-934532a040af">
+      <ID>YTM</ID>
+      <Name>YTM</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e7105e5d-41b5-45ce-808a-e1b5bad3adfe">
+          <DataType>WChar</DataType>
+          <DataSize>55</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ea727551-c069-4a4e-9c22-2a77c4cf077a">
+            <TableID>dbo_SamplePortfolio</TableID>
+            <ColumnID>YTM</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7b434cfe-ec5c-43cd-a22f-8094dd10d273">
+      <ID>YTW</ID>
+      <Name>YTW</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="35a6ceb0-590c-41ee-83e2-6a0c9786b2fd">
+          <DataType>Single</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2a2b42f5-0f62-4847-acee-fc5213b82ea9">
+            <TableID>dbo_SamplePortfolio</TableID>
+            <ColumnID>YTW</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="2b2ea83d-eca2-4fb5-8cb6-d83c32aff7d6">
+      <ID>Sample Portfolio</ID>
+      <Name>Sample Portfolio</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Decision_Trees</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="845b3635-4661-4179-aeec-9051cdd942a1">
+          <ID>Coupon</ID>
+          <Name>Coupon</Name>
+          <SourceColumnID>Coupon</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="35853718-952d-4e1f-af6a-c58e87064025">
+          <ID>Duration</ID>
+          <Name>Duration</Name>
+          <SourceColumnID>Duration</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="7d6f2a78-5f73-4790-8673-4bac6a3cbfbf">
+          <ID>DWE</ID>
+          <Name>DWE</Name>
+          <SourceColumnID>DWE</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="6e925af1-66b0-4948-a7cd-76108c3059a4">
+          <ID>Effective Dur</ID>
+          <Name>Effective Dur</Name>
+          <SourceColumnID>Effective Dur</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="0221936a-ca3a-4f2a-a40e-1c2957a32f79">
+          <ID>Id</ID>
+          <Name>Id</Name>
+          <SourceColumnID>Id</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="82660174-5d86-41fa-84bb-e053a4799813">
+          <ID>Mod Dur</ID>
+          <Name>Mod Dur</Name>
+          <SourceColumnID>Mod Dur</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="694bf5cd-4cd7-4220-b40b-8231a7de8496">
+          <ID>OAS</ID>
+          <Name>OAS</Name>
+          <SourceColumnID>OAS</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="45c488b1-eb44-43b2-833b-48646934db1a">
+          <ID>Price</ID>
+          <Name>Price</Name>
+          <SourceColumnID>Price</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="c9779b87-da19-4a9e-a948-50926717bce8">
+          <ID>Sec Group</ID>
+          <Name>Sec Group</Name>
+          <SourceColumnID>Sec Group</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="983482d2-6bc3-49ae-a12f-16b57f78959c">
+          <ID>Sec Type</ID>
+          <Name>Sec Type</Name>
+          <SourceColumnID>Sec Type</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="d062aa59-d3a4-4091-a8b2-75fe915486d8">
+          <ID>WAL</ID>
+          <Name>WAL</Name>
+          <SourceColumnID>WAL</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="58c8a1e3-9d0e-48e3-b2d4-731a6a967c62">
+          <ID>WAL To Worst</ID>
+          <Name>WAL To Worst</Name>
+          <SourceColumnID>WAL To Worst</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="345f77a8-d2e0-4c48-8aa4-3eb52ebf183b">
+          <ID>YTM</ID>
+          <Name>YTM</Name>
+          <SourceColumnID>YTM</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="787f8899-edf9-4a43-a784-7cc446ca09a0">
+          <ID>YTW</ID>
+          <Name>YTW</Name>
+          <SourceColumnID>YTW</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+</MiningStructure>
