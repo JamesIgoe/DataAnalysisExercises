@@ -1,0 +1,2 @@
+c:\Users\igoej\OneDrive\Documents\GitHub\DataAnalysisExercises\FSharp_DataScience\obj\Debug\FSharp_DataScience.fsprojAssemblyReference.cache
+c:\Users\igoej\OneDrive\Documents\GitHub\DataAnalysisExercises\FSharp_DataScience\obj\Debug\FSharp_DataScience.fsproj.CoreCompileInputs.cache
